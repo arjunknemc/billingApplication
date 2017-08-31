@@ -15,6 +15,7 @@ public class CustomerModel  {
     String name;
     String gst;
     String address;
+    String contact_no;
 
     public int getId() {
         return id;
@@ -48,10 +49,20 @@ public class CustomerModel  {
         this.address = address;
     }
 
+    public String getContact_no() {
+        return contact_no;
+    }
+
+    public void setContact_no(String contact_no) {
+        this.contact_no = contact_no;
+    }
+
     @Override
     public String toString() {
-        return "CustomerModel{" + "id=" + id + ", name=" + name + ", gst=" + gst + ", address=" + address + '}';
+        return "CustomerModel{" + "id=" + id + ", name=" + name + ", gst=" + gst + ", address=" + address + ", contact_no=" + contact_no + '}';
     }
+
     
+   
     
 }

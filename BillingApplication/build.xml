@@ -9,6 +9,7 @@
 <!-- in the project's Project Properties dialog box.-->
 <project name="BillingApplication" default="default" basedir=".">
     <description>Builds, tests, and runs the project BillingApplication.</description>
+    <property name="main-class" value="com.login.Login" />
     <import file="nbproject/build-impl.xml"/>
     <!--
 
@@ -68,6 +69,14 @@
     the compile target as the regular run target does. Again, for a list of available 
     properties which you can use, check the target you are overriding in the
     nbproject/build-impl.xml file. 
-
-    -->
+<zipgroupfileset dir="dist/lib" includes="**/*.jar" />
+    
+	<jar destfile="dist/new_BillingApplication.jar">
+	<zipfileset dir="dist/lib" />
+	<manifest>
+		<attribute name="Main-Class" value="com.login.Login" />
+	</manifest>
+	<fileset dir="dist/lib" includes="**/*.jar" />
+	<fileset dir="build/classes" />
+	</jar> -->
 </project>
